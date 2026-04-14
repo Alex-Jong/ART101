@@ -1,7 +1,17 @@
 p {color: red; font-size: large;}
 
-li {text-allign: center;}
+p strong {font-weight: normal;}
+
+li {text-align: center;}
 
 html {font-family: "Saira Stencil", sans-serif; background-color: green;}
 
-p {background-color: black;}
+.highlight_01 {background-color: aquamarine;}
+
+.highlight_02 {background-color: beige;}
+
+#paprika {background-color: lightsalmon;}
+
+#img-small {width: 300px}
+#img-medium {width: 350px}
+#img-large {width: 400px}

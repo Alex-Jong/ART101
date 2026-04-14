@@ -1,0 +1,9 @@
+p {color: red; font-size: larger;}
+ol {color: purple; font-size: large;}
+html {font-family: "Saira Stencil", sans-serif; background: yellowgreen;  
+    background-image: url(Lebron_bron.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}

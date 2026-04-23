@@ -1,0 +1,25 @@
+p {color: red; font-size: large;}
+
+p strong {font-weight: normal;}
+
+li {text-align: center;}
+
+html {font-family: "Saira Stencil", sans-serif; background-color: green;}
+
+.highlight_01 {background-color: aquamarine;}
+
+.highlight_02 {background-color: beige;}
+
+#paprika {background-color: lightsalmon;}
+
+#img-small {width: 300px}
+#img-medium {width: 350px}
+#img-large {width: 400px}
+
+.test-div{
+    background: cornflowerblue;
+    margin: 30px;
+    padding: 40px;
+}
+
+.my-flex{display: flex;}

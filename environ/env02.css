@@ -1,0 +1,13 @@
+html {background-image: url(quarry.webp); background-size: cover;}
+
+img {width: 200px;}
+
+.top {background-color: aqua; text-align: center; padding: 20px; margin: 20px; border: 6px solid green; border-radius: 50px;}
+
+.main {display: flex; gap: 350px; margin: 300px;}
+
+#deer {background-color: green; padding: 50px; text-align: center; border: 6px solid brown; border-radius: 50px;}
+
+#slug {background-color: yellow; padding: 50px; text-align: center; border: 6px solid blue; border-radius: 50px;}
+
+.yo {text-align: center; background-color: orangered; padding: 100px center; border: 5px solid purple; border-radius: 60px; margin: 200px}

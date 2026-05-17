@@ -139,3 +139,4 @@ function askPlace() {
 $("#door").click(function () {
     askPlace();
 });
+

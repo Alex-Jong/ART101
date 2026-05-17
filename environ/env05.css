@@ -1,0 +1,126 @@
+body {background-image: url(quarry.webp); background-size: cover;}
+
+img {background-image: url(night.jpg); background-size: cover;}
+
+img {width: 200px;}
+
+.top {background-color: aqua; text-align: center; padding: 20px; margin: 20px; border: 6px solid green; border-radius: 50px;}
+
+.main {display: flex; gap: 350px; margin: 300px;}
+
+#deer {background-color: green; padding: 50px; text-align: center; border: 6px solid brown; border-radius: 50px;}
+
+#slug {background-color: yellow; padding: 50px; text-align: center; border: 6px solid blue; border-radius: 50px;}
+
+#yo {text-align: center; background-color: orangered; padding: 100px center; border: 5px solid purple; border-radius: 60px; margin: 200px;}
+
+.environment-output {background-color: aqua; padding: 50px; text-align: center; border: 6px solid brown; border-radius: 50px;}
+
+#environ-read {background-color: rgb(196, 237, 237); padding: 50px; text-align: center; border: 6px solid brown; border-radius: 50px;}
+
+#needy-button1 {color: yellow; background-color: blue; border: 2px solid yellow; border-radius: 2px;}
+
+#needy-button2 {color: yellow; background-color: blue; border: 2px solid yellow; border-radius: 2px;}
+
+#needy-button3 {color: yellow; background-color: blue; border: 2px solid yellow; border-radius: 2px;}
+
+#needy-button4 {color: yellow; background-color: blue; border: 2px solid yellow; border-radius: 2px;}
+
+#needy-button5 {color: yellow; background-color: blue; border: 2px solid yellow; border-radius: 2px;}
+
+#bruh {text-align: center; background: orange; border: 5px solid purple; border-radius: 60px; margin: 200px;}
+
+
+#asker {
+  display: none;
+  position: absolute;
+  left: 920px;
+  top: 600px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 12px;
+  width: 180px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#status {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.following {
+  box-shadow: 0 0 20px black;
+}
+
+#nom {
+  display: none;
+  position: absolute;
+  left: 920px;
+  top: 300px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 12px;
+  width: 180px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#boss {
+  display: none;
+  position: absolute;
+  left: 725px;
+  top: 180px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 12px;
+  width: 180px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#box {
+  display: none;
+  position: absolute;
+  left: 725px;
+  top: 50px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 12px;
+  width: 180px;
+  z-index: 3;
+  pointer-events: none;
+  text-align: center;
+}
+
+.cyrene{position: relative; color: white; top: 500px; min-height: 80px;}
+
+.choose {position: relative; top: 500px;background-color: black; padding: 50px; border: 6px solid white; min-height: 60px;}
+
+#answer{color:white;}
+
+.pick {position: relative; top: 400px; min-height: 80px; margin-top: 60px; align-items: center; text-align: center; display: flex; justify-content: space-evenly; gap: 20px;}
+
+#fight{font-size: 50px; color: orange; background-color: black; border: 6px solid orange;}
+#act{font-size: 50px; color: orange; background-color: black; border: 6px solid orange;}
+#item{font-size: 50px; color: orange; background-color: black; border: 6px solid orange;}
+#mercy{font-size: 50px; color: orange; background-color: black; border: 6px solid orange;}
+
+#hit {
+  display: none;
+  position: absolute;
+  left: 725px;
+  top: 180px;
+  background: red;
+  border: 10px solid black;
+  border-radius: 20px;
+  padding: 12px;
+  width: 180px;
+  z-index: 3;
+  pointer-events: none;
+  text-align: center;
+}

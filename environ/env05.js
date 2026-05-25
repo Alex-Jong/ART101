@@ -106,7 +106,8 @@ $("#needy-button5").click(function () {
 
 function askPlace() {
     
-    let userPlace = prompt("Where do you want to go? Choose Wisely... Night time walk or Day time walk?");
+    // Changed prompt question to make it more clear on what to type
+    let userPlace = prompt("Where do you want to go? Choose Wisely... Night time walk or Day time walk? Type exactly how it is spelled out");
 
     if (userPlace == "Day time walk") {
         $("body").css("background-image", 'url(day.jpg');
@@ -119,6 +120,7 @@ function askPlace() {
     }
     
     else if (userPlace == "Night time walk") {
+        
         $("body").css("background-image", 'url(night.jpg');
         $(".top").hide();
         $("#yo").hide();
@@ -236,27 +238,30 @@ $("#return").click(function () {
 
 $("#fight").click(function(){
 
-    let atk = {wow: "You attacked Irontomb"};
+    //let atk = {wow: "You attacked Irontomb"};
 
-    let attk = "<p> " + atk.wow + ".</p>";
+    //let attk = "<p> " + atk.wow + ".</p>";
 
-    let de = {lol: "You defeated Irontomb"};
+    //let de = {lol: "You defeated Irontomb"};
 
-    let feet = "<p> " + de.lol + ".</p>";
+    //let feet = "<p> " + de.lol + ".</p>";
 
-    $("#answer").html(attk);
-    $("#hit").show();
+    // Removed the extra coding above and made it more simple below
+
+    $("#answer").html("You attacked Irontomb and defeated him!");
+    $("#hit").delay("fast").fadeIn();
     $("#hit").animate({height: "300px"}, "fast");
     $("#hit").animate({width: "150px"}, "fast");
     $("#hit").animate({height: "100px"}, "fast");
     $("#hit").animate({width: "300px"}, "fast");
     $("#hit").animate({height: "0px"}, "fast");
     $("#hit").animate({width: "0px"}, "fast");
-    $("#answer").dequeue();
-    $("#answer").html(feet);
-    $("#hit").hide();
-    $("#boss").fadeOut();
-    $("#box").fadeOut();
+    //$("#answer").dequeue();
+    //$("#answer").html(feet);
+    $("#hit").delay("slow").fadeOut();
+    $("#boss").delay("slow").fadeOut();
+    $("#box").delay("slow").fadeOut();
+    //fixed issue of hit box not dissapearing after attack by using a series of delays, fadeIn, and FadeOut
 });
 
 $("#act").click(function(){
@@ -277,11 +282,13 @@ $("#act").click(function(){
 });
 
 $("#item").click(function(){
-    let um = {THE: '<img src= "chicken.jpg">' + "You didn't bring anything with you but dining hall chicken.... You can't really eat it now..."};
+    //let um = {THE: '<img src= "chicken.jpg">' + "You didn't bring anything with you but dining hall chicken.... You can't really eat it now..."};
 
-    let erm = "<p> " + um.THE + ".</p>";
+    //let erm = "<p> " + um.THE + ".</p>";
 
-    $("#answer").html(erm);
+    // Removed extra coding above and made it more simple below
+
+    $("#answer").html('<img src="chicken.jpg">' + "You didn't bring anything with you but dining hall chicken.... You can't really eat it now...");
 });
 
 $("#mercy").click(function(){

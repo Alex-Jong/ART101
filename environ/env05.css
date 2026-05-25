@@ -1,6 +1,6 @@
 body {background-image: url(quarry.webp); background-size: cover;}
 
-img {background-image: url(night.jpg); background-size: cover;}
+/*removed night.jpg to fix issue of img appearing before clicking on door*/
 
 img {width: 200px;}
 

@@ -15,32 +15,31 @@ function getCreatureFromForm() {
 };
 
 async function getRandomName() {
-   // goes and grabs some data from an api
-   const response = await fetch( "https://api.gofakeit.com/funcs/petname", {method: "GET",});
-   // cov\nverts the response into plaoin text
-   const nameRandom = await response.text();
-    
-   console.log("Got name:", nameRandom);
-   return nameRandom;
+    // goes and grabs some data from an api
+    const response = await fetch("https://api.gofakeit.com/funcs/petname", { method: "GET", });
+    // cov\nverts the response into plaoin text
+    const nameRandom = await response.text();
+
+    console.log("Got name:", nameRandom);
+    return nameRandom;
 }
 
 async function getRandomColor() {
-   // goes and grabs some data from an api
-   const response = await fetch( "https://api.gofakeit.com/funcs/hexcolor", {method: "GET",});
-   // cov\nverts the response into plaoin text
-   const colorRandom = await response.text();
-    
-   console.log("Got color:", colorRandom);
-   return colorRandom;
-}
+    // goes and grabs some data from an api
+    const response = await fetch("https://api.gofakeit.com/funcs/hexcolor", { method: "GET", });
+    // cov\nverts the response into plaoin text
+    const colorRandom = await response.text();
 
+    console.log("Got color:", colorRandom);
+    return colorRandom;
+}
 
 // random creature
 async function randomizeCreature() {
 
-    const eyesRandom= Math.floor(Math.random() * 5) +1;
-    const nameRandom= await getRandomName();
-    const colorRandom= await getRandomColor();
+    const eyesRandom = Math.floor(Math.random() * 5) + 1;
+    const nameRandom = await getRandomName();
+    const colorRandom = await getRandomColor();
 
     const randomCreature = {
         name: nameRandom,
@@ -83,8 +82,29 @@ function addCreatureToDOM(creature) {
     $("#creature-list").append(html);
 }
 
+// function to load creatures from firebase
+function loadCreaturesFromDB() {
+
+    creatureRef.once("value").then(snapshot => {
+        const data = snapshot.val() || {};
+        allCreatures = Object.keys(data).map(id => data[id]);
+        renderAllCreatures();
+    });
+
+}
+
+// renders a list of creatures on the page
+function renderAllCreatures() {
+
+    $("#creature-list").empty();
+
+    allCreatures.forEach( (cr, index) => {
+        addCreatureToDOM(cr);
+    });
+}
+
 // the main brain
-$("#crAdd").click( async function () {
+$("#crAdd").click(async function () {
 
     let newCreature;
     // choose the way /random or manual
@@ -111,6 +131,18 @@ $("#crAdd").click( async function () {
     // save creature to the memory 
     allCreatures.push(newCreature);
 
+    // save creature to the memory 
+    creatureRef.push(newCreature);
+
+
     // reset the fporm prepare for the next iteration
+
+});
+
+// load creatures when the button is clicked
+
+$("#btn-load").click( function(){
+
+    loadCreaturesFromDB();
 
 });
